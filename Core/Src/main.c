@@ -191,10 +191,10 @@ int main(void)
             MPU_Get_Accelerometer(&aacx, &aacy, &aacz);
             MPU_Get_Gyroscope(&gyrox, &gyroy, &gyroz);
             MapPitchToContorl(pitch);
-            //OLED_ShowImu(pitch, roll, yaw);
-            // Test_Send_User1(aacx, aacy, aacz, gyrox, gyroy, gyroz, roll, pitch, yaw);
+            // OLED_ShowImu(pitch, roll, yaw);
+            //  Test_Send_User1(aacx, aacy, aacz, gyrox, gyroy, gyroz, roll, pitch, yaw);
             Vofa_view(roll, pitch, yaw);
-            //delay_ms(10);
+            // delay_ms(10);
         }
         delay_ms(10);
         // LedBlink();
