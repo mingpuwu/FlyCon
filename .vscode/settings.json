@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "usart.h": "c",
+        "gpio.h": "c",
+        "stm32f0xx_hal_gpio.h": "c",
+        "stm32f0xx_hal.h": "c",
+        "i2c.h": "c",
+        "delay.h": "c",
+        "inv_mpu_dmp_motion_driver.h": "c",
+        "main.h": "c",
+        "control.h": "c",
+        "bmp280.h": "c",
+        "spi.h": "c"
+    }
+}
