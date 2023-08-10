@@ -13,6 +13,13 @@ void PIDController_Init(PIDController *pid)
     pid->out = 0.0f;
 }
 
+void PIDControllerSetPar(PIDController *pid, float kp, float ki, float kd)
+{
+    pid->Kp = kp;
+    pid->Ki = ki;
+    pid->Kd = kd;
+}
+
 float PIDController_Update(PIDController *pid, float setpoint, float measurement)
 {
     /*

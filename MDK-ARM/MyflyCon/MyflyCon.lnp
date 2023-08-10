@@ -17,6 +17,7 @@
 "myflycon\usart.o"
 "myflycon\stm32f0xx_it.o"
 "myflycon\stm32f0xx_hal_msp.o"
+"myflycon\pid.o"
 "myflycon\stm32f0xx_hal_i2c.o"
 "myflycon\stm32f0xx_hal_i2c_ex.o"
 "myflycon\stm32f0xx_hal_rcc.o"

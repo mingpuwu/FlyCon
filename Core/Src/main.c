@@ -190,7 +190,8 @@ int main(void)
             float tempf = temp / 100;
             MPU_Get_Accelerometer(&aacx, &aacy, &aacz);
             MPU_Get_Gyroscope(&gyrox, &gyroy, &gyroz);
-            MapPitchToContorl(pitch);
+            //MapPitchToContorl(pitch);
+            Controlling(pitch, roll);
             // OLED_ShowImu(pitch, roll, yaw);
             //  Test_Send_User1(aacx, aacy, aacz, gyrox, gyroy, gyroz, roll, pitch, yaw);
             Vofa_view(roll, pitch, yaw);

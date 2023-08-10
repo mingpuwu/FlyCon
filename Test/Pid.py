@@ -83,25 +83,27 @@ def TestSystem_Update(inp):
     global global_output
     global global_alpha
 
-    global_output = (0.01 * inp + global_output) / (1.0 + global_alpha * 0.01)
+    global_output = (0.002 * inp + global_output) / (1.0 + global_alpha * 0.01)
 
     return global_output
 
 if __name__ == '__main__':
-    pid  = Pid(2.0,0.5,0.25)
+    pid  = Pid(100,30,3)
     client = socket.socket()
-    server_ip_port = ('192.168.1.8',1347)
+    server_ip_port = ('192.168.1.9',1347)
     client.connect(server_ip_port)
     t = 0.0
-    while(t < 4.0):
+    while(t < 10.0):
         # /* Get measurement from system */
-        measurement = TestSystem_Update(pid.out)
+        # measurement = TestSystem_Update(pid.out)
+        measurement = 5
 
         # /* Compute new control signal */
-        pid.Update(1.0, measurement)
+        pid.Update(5.0, measurement)
 
         print(measurement, pid.out)
         client.send((str(measurement)+','+str(pid.out)+'\r\n').encode())
         t = t + 0.01
+    client.close()
 
     
